@@ -1,9 +1,7 @@
 # Interactive-Trigonometry-Animation
 A program visually demonstrating the function of cos and sin while creating an appealing configurable animation, to prove that oscillation is the projection of uniform circular motion on the diameter of the circle.
 
-
-https://user-images.githubusercontent.com/93825166/171161026-d216b71c-dabb-4230-b392-0ab4190c35ef.mp4
-
+<img src="https://user-images.githubusercontent.com/93825166/171161536-0ef353db-b8ac-4787-a2a8-3d71cdc18e00.gif" width="350" height="375"/>
 
 # Abstract
 This report describes the development of the program behind a mathematical animation 
