@@ -23,8 +23,8 @@ void setup() {
     size(800,800); } 
   // 800 pixels by 800 pixels
   void draw() {
-    int a = (int)(400+150*cos(angle));
-    int b = (int)(400+150*sin(angle));
+    int a = (int)(400+amplitude*cos(angle));
+    int b = (int)(400+amplitude*sin(angle));
   //"a" and "b" used as x,y for  circular motion
     int j = 0; 
   /*this declaration must be inside void draw
