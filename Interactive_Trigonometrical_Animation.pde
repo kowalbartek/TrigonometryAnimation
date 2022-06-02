@@ -18,74 +18,75 @@ float amplitude = 150;
 float angle = 0, theta = 0, x = 0, g = 0;
 //math variables
 
-void setup()     { 
-//setup the screen
-  size(800,800); } 
-// 800 pixels by 800 pixels
-void draw() {
-  int a = (int)(400+150*cos(angle));
-  int b = (int)(400+150*sin(angle));
-//"a" and "b" used as x,y for  circular motion
-  int j = 0; 
-/*this declaration must be inside void draw
-because it is used in a loop later */
-  angle += velocity; 
-//velocity is continuosly added onto angle (for later use) 
-  
+void setup() { 
+  //setup the screen
+    size(800,800); } 
+  // 800 pixels by 800 pixels
+  void draw() {
+    int a = (int)(400+150*cos(angle));
+    int b = (int)(400+150*sin(angle));
+  //"a" and "b" used as x,y for  circular motion
+    int j = 0; 
+  /*this declaration must be inside void draw
+  because it is used in a loop later */
+    angle += velocity; 
+  //velocity is continuosly added onto angle (for later use) 
 
-  background(255); 
-//basic background colour 
-  pushStyle(); 
-//acts like pushMatrix(), but for styles
-  noFill(); 
-//makes the fill = none
-  stroke(255,200,200); 
-//colour of stroke
-  strokeWeight(2);
-//how thick the stroke is
-  ellipse(width/2, height/2, (2*amplitude), (2*amplitude));
-//draw an ellipse at centre, with double the amplitude of the animation
-  popStyle(); 
-// acts like popMatrix(), but for styles
 
-if (keyPressed) {
-    if (key == '1') { fill(255,0,0); } //RED
-    if (key == '2') { fill(255,125,0); } //ORANGE
-    if (key == '3') { fill(255,255,0); } //YELLOW
-    if (key == '4') { fill(0,255,0); } //GREEN
-    if (key == '5') { fill(0,255,255); } //CYAN
-    if (key == '6') { fill(0,0,255); } //BLUE
-    if (key == '7') { fill(125,0,255); } //VIOLET
-    if (key == '8') { fill(255,0,255); } //MAGENTA
-    if (key == '9') { fill(255); } //WHITE
-    if (key == '0') { fill(0); } //BLACK
-  } 
+    background(255); 
+  //basic background colour 
+    pushStyle(); 
+  //acts like pushMatrix(), but for styles
+    noFill(); 
+  //makes the fill = none
+    stroke(255,200,200); 
+  //colour of stroke
+    strokeWeight(2);
+  //how thick the stroke is
+    ellipse(width/2, height/2, (2*amplitude), (2*amplitude));
+  //draw an ellipse at centre, with double the amplitude of the animation
+    popStyle(); 
+  // acts like popMatrix(), but for styles
 
-  for(int r = 1; r <= balls; r++)  {
-//basic for loop which multiplies the rotation code each time it runs
-    if (j < balls)  { 
-//while "j" value is less than "balls", run the code under
-    x = (amplitude*cos(angle+(j)*change)); 
-/* declare "x", with "j" within the math in order to update 
-the "change" value by muliplying it by "j" */
-    
-  pushMatrix(); 
-//isolate the next code so it has no effect on anything else
-    translate(width/2,height/2); 
-//translate to the middle of the screen
-    rotate(r*(PI/balls)); 
-//"r" variable multiplying the rotation value
-    stroke(255, 0, 0);
-    line(0,0,x,0); 
-//line connecting the drawn ball to the circle
-    stroke(255,0,0);
-    ellipse(x,0,size,size); 
-//draw an ellipse with "x" value and "size" variable
-    j++; 
-//updated "j" in order to draw more circles
-  popMatrix();
-//close the matrix
-    }   } 
+  if (keyPressed) {
+      if (key == '1') { fill(255,0,0); } //RED
+      if (key == '2') { fill(255,125,0); } //ORANGE
+      if (key == '3') { fill(255,255,0); } //YELLOW
+      if (key == '4') { fill(0,255,0); } //GREEN
+      if (key == '5') { fill(0,255,255); } //CYAN
+      if (key == '6') { fill(0,0,255); } //BLUE
+      if (key == '7') { fill(125,0,255); } //VIOLET
+      if (key == '8') { fill(255,0,255); } //MAGENTA
+      if (key == '9') { fill(255); } //WHITE
+      if (key == '0') { fill(0); } //BLACK
+    } 
+
+    for(int r = 1; r <= balls; r++)  {
+  //basic for loop which multiplies the rotation code each time it runs
+      if (j < balls)  { 
+  //while "j" value is less than "balls", run the code under
+      x = (amplitude*cos(angle+(j)*change)); 
+  /* declare "x", with "j" within the math in order to update 
+  the "change" value by muliplying it by "j" */
+
+    pushMatrix(); 
+  //isolate the next code so it has no effect on anything else
+      translate(width/2,height/2); 
+  //translate to the middle of the screen
+      rotate(r*(PI/balls)); 
+  //"r" variable multiplying the rotation value
+      stroke(255, 0, 0);
+      line(0,0,x,0); 
+  //line connecting the drawn ball to the circle
+      stroke(255,0,0);
+      ellipse(x,0,size,size); 
+  //draw an ellipse with "x" value and "size" variable
+      j++; 
+  //updated "j" in order to draw more circles
+    popMatrix();
+  //close the matrix
+      }   
+} 
     
     if (keyPressed)  {
     if (key == 61)  {  balls++;  }
