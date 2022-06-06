@@ -1,11 +1,11 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/93825166/171623805-cc5c1532-dd40-497c-b396-f2fc0426c131.gif" width="250" height"250"/></p>
 
-# Interactive-Trigonometry-Animation
+# Interactive Trigonometry Animation
 A program visually demonstrating the function of cos and sin while creating an appealing configurable animation, to prove that oscillation is the projection of uniform circular motion on the diameter of the circle.
 
 # Project Hosted on OpenProcessing
 <p> Click here:     
-<a href="https://openprocessing.org/sketch/1590752">
+<a href="[https://openprocessing.org/sketch/1590752](https://kowalbartek.github.io/WeatherApp/)">
 	<img src="https://cdn-images-1.medium.com/max/220/1*qzzrgBZUbIjqtsNVEJnm9Q@2x.png" width="45" height"45"/><p/>
 </a>
 
